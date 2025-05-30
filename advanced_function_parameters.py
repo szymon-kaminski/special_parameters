@@ -29,3 +29,17 @@ def print_profile(**info):
         print(f"{key}: {value}")
     
 print_profile(name="Szymon", age=35, city="Pszczyna")
+
+print()
+
+### Demonstrates advanced example using: '/', '*', '**kwargs'.
+def greet(name, /, *, age, **others):
+    print(f"Hi, {name}!")
+    print(f"You are {age} years old!")
+    if others:
+        print("Additional information:")
+        for key, value in others.items():
+            print(f"- {key}: {value}")
+
+greet("Szymon", age=35, city="Pszczyna", hobby="sport & programming", learning="Python")
+
