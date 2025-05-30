@@ -12,3 +12,10 @@ def show_age(*, age):
 
 show_age(age=35)
 # show_age(35)  # This would raise an error!
+
+### Demonstrates arbitrary positional arguments using '*args'.
+def print_numbers(*numbers):
+    print("Numbers provided: ", numbers)
+
+print_numbers(1, 2, 3, 4)
+print_numbers()  # Also valid, prints an empty tuple
